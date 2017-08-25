@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>BUS</title>
+  <link rel="stylesheet prefetch" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body ng-app="busApp" ng-controller="busController">
+  <div class="container">
+<div class="col-sm-8 col-sm-offset-2">
+  <div class="page-header"><h1>Find Your Bus</h1></div>
+    <form name="userForm">
+      <div class="form-group">
+          <label>Source</label>
+          <input type="text" class="form-control" ng-model="user.src" ng-required>
+      </div>
+      <div class="form-group">
+          <label>Destination</label>
+          <input type="text" class="form-control" ng-model="user.dest">
+      </div>
+      <div class="form-group">
+          <label>Time</label>
+          <input type="Time" class="form-control" ng-model="user.time" ng-required>  
+      </div>
+      <button type="submit" class="btn btn-primary" ng-click="searchData()">Search</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
